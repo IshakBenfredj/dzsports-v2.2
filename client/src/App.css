@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --main-color: rgb(0, 150, 136);
+    --sec-color: rgb(0, 111, 93);
+    --transition: .3s;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Changa', sans-serif;
+}
+section {
+    padding: 50px 0;
+}
+.fabg {
+    background-color: #fafafa;
+    position: relative;
+    z-index: 0;
+}
+.jsonMessage {
+    background-color: #cff4fc;
+    color: #055160;
+    border: 1px solid #0fa3c1;
+    border-radius: 8px;
+    padding: 5px 13px 5px 10px;
+    position: relative;
+    overflow: hidden;
+}
+.jsonMessage::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #055160;
+}
+.error {
+    color: #58151c;
+    background-color: #f8d7da;
+    border: 1px solid #f1aeb5;
+    padding: 5px 13px 5px 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.error::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #58151c;
+    right: 0;
+    top: 0;
+}

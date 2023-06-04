@@ -1,0 +1,130 @@
+/* LOGIN STYLING */
+
+.log {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+.con {
+    width: 70%;
+    height: fit-content;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "login";
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+}
+
+@media (max-width:767px) {
+    .log {
+        height: calc(117vh - 419px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .con {
+        width: 100%;
+    }
+}
+.design {
+    grid-area: design;
+    display: none;
+    position: relative;
+}
+.design img {
+    width: 100%;
+    height: 100%;
+}
+.login {
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: white;
+}
+.login h3.titlee {
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.text-input {
+    background: #e6e6e6;
+    height: 40px;
+    width: 90%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+}
+
+.text-input input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+::placeholder {
+    color: #9a9a9a;
+}
+
+.login-btn {
+    width: 68%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(50, 168, 143, 0.799);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.lin {
+    font-size: 12px;
+    color: #9a9a9a;
+    cursor: pointer;
+    user-select: none;
+}
+
+a.forgot {
+    margin-top: 15px;
+}
+
+.create {
+    margin-top: 22px;
+    font-size: 22px;
+}
+.create > a{
+    font-size: 18px;
+}
+
+.create i {
+    color: #9a9a9a;
+    margin-left: 10px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+@media (min-width: 1100px) {
+    .con {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "design login";
+    }
+
+    .design {
+        display: block;
+    }
+
+}

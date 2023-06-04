@@ -1,0 +1,102 @@
+.nav {
+    justify-content: space-around;
+    z-index: 1000;
+}
+.logoImg {
+    height: 37px;
+    padding: 5px;
+}
+.homeNav .bgTra {
+    background-color: transparent;
+}
+.homeNav .auth button,
+.homeNav menu a.changeBg,
+.homeNav menu a {
+    transition: var(--transition);
+    overflow: hidden;
+}
+@media (min-width:768px) { 
+    .homeNav menu a:hover {
+        color: var(--sec-color) !important;
+    }
+    .homeNav menu a::before {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: var(--sec-color);
+        top: 2px;
+        left: -100%;
+        transition: var(--transition);
+    }
+    .homeNav menu a:hover::before {
+        left: 0;
+    }
+    .homeNav menu a.changeBg:hover {
+        background-color: #fafafa;
+    }
+}
+@media (max-width:767px) { 
+    .homeNav .nav {
+        justify-content: space-between;
+    }  
+    .homeNav  menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        /* background: #111; */
+        background: var(--sec-color);
+        padding: 20px;
+        width: 300px;
+        min-height: 20vh;
+        transform: translateX(-300px);
+        transition: var(--transition);
+        border-radius: 10px;
+    }
+    .homeNav  menu.open {
+        transform: translateX(0);
+    }
+    .homeNav  menu a {
+        color: #fff !important;
+        width: 100%;
+        text-align: center;
+    }
+    .homeNav  menu a:not(:first-child){
+        border-top: 1px solid;
+    }
+    .homeNav  menu a:not(:last-child){
+        border-bottom: 1px solid;
+    }
+    .homeNav  menu a:hover {
+        padding-left: 30px;
+    }
+}
+.homeNav .auth button:hover {
+    background-color: var(--sec-color) !important;
+}
+
+/* Footer Styling */
+
+footer {
+    /* background-color: var(--main-color); */
+    background-color: #111;
+    z-index: 10;
+    position: relative;
+}
+footer .container:not(:last-of-type) {
+    border-bottom: 1px solid #fff;
+}
+/* footer menu a {
+    height: 0;
+    width: 0;
+} */
+footer menu a::before {
+    height: 0;
+    width: 0;
+}
+.copy {
+    font-size: 40px;
+}

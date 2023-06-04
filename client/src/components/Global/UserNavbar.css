@@ -1,0 +1,201 @@
+.userNav  {
+    background-color: #fff;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    transition: var(--transition);
+}
+.userNav .head {
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.userNav .userIcon {
+    font-size: 25px;
+}
+
+.userNav .nav div:nth-child(2) a ,
+.userNav .nav > div:nth-child(2) div {
+    font-size: 24px;
+    line-height: 32px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.userNav .nav div:nth-child(2) a::before {
+    display: none;
+}
+.userNav .options {
+    position: fixed;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    top: 50px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+.userNav .options.show{
+    display: flex;
+}
+
+.userNav .options .option{
+    font-size: 14px !important;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.userNav .options .option:hover {
+    background-color: var(--sec-color);
+}
+
+@media (min-width:768px) { 
+    .nav > div:nth-child(2) a:hover,
+    .userNav .nav > div:nth-child(2) div:hover {
+        color: var(--sec-color) !important;
+    }
+    .nav > div:nth-child(2) a::before ,
+    .userNav .nav > div:nth-child(2) div::before {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: var(--sec-color);
+        top: 2px;
+        left: -100%;
+        transition: var(--transition);
+    }
+    .nav > div:nth-child(2) a:hover::before ,
+    .userNav .nav > div:nth-child(2) div:hover::before{
+        left: 0;
+    }
+    .nav > div:nth-child(2) a.changeBg:hover {
+        background-color: #fafafa;
+    }
+}
+@media (max-width:767px) {
+    .userNav  {
+        background-color: transparent;
+    }
+    .userNav .nav {
+        position: fixed;
+        bottom: 0px;
+        background-color: var(--main-color);
+        padding: 0 10px;
+        gap: 5px;
+        right: 0;
+        left: 0;
+    }
+    .userNav .username {
+        display: none;
+    }
+    .userNav .nav > div:nth-child(2) {
+        flex-basis: 75%;
+        order: 2;
+    }
+    .userNav .nav > div:nth-child(2) a, 
+    .userNav .nav > div:nth-child(2) div {
+        flex-basis:calc(100% / 3);
+        text-align: center;
+    }
+    .userNav .nav > div:nth-child(3) {
+        flex-basis: 25%;
+        order: 1;
+    }
+    .userNav .nav > div:nth-child(2) a ,
+    .userNav .nav > div:nth-child(2) div,
+    .userNav .nav > div:nth-child(3) i {
+        font-size: 30px;
+        color: #fff;
+    }
+    .userNav .options.show {
+        bottom: 70px;
+        top: auto;
+        width: 182px;
+        right: 19px;
+    }
+}
+
+.numOfNotify {
+    position: absolute;
+    background-color: #FF5722;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 12px;
+    right: 11px;
+}
+
+.allNotify {
+    position: fixed;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: 99;
+    top: 56px;
+    right: 15%;
+    transform: translateX(-50%);
+    user-select: none;
+    height: 70%;
+    overflow-y: scroll !important;
+}
+.allNotify:hover::before {
+    display: none;
+}
+@media (max-width:767px) {
+    .allNotify {
+        bottom: 63.98px;
+        top: auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transform: translateX(0);
+    }
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+    border-bottom: 1px solid var(--main-color);
+    background-color: #41d9cb57;
+}
+.notification img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.notification > a {
+    color: #444 !important;
+    font-size: 18px !important;
+    display: block;
+    flex-basis: 100% !important;
+    line-height: 1 !important;
+}
+
+.userNavPhoto {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #000;
+    background: #fff;
+}
